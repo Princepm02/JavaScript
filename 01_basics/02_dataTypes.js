@@ -15,11 +15,11 @@ let isLoggedIn = false
 let state;
 
 // number => 2 to power 53
-// bigint => 17263736283262n   // After writing number write character 'n' atlast of number
+// bigint
 // string => ""
 // boolean => true/false
 // null => standalone value
-// undefined => 
+// undefined => When we have declared a variable but not defined it's value
 // symbol => unique
 
 
