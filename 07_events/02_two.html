@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mishra</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    /*
+    - JavaScript
+      - Synchronous language:
+            JavaScript, by default, executes code in a synchronous, sequential manner.
+            This means that each line of code is executed one after the other,
+            and the next line doesn't execute until the current one is finished.
+
+      - Single thread:
+            JavaScript's execution environment (in most browsers and Node.js) is single-threaded.
+            This means that it can only execute one task at a time.
+
+        However, it is important to note that javascript can perform asynchronous operations. This is done by using things like:
+        - Callbacks
+        - Promises
+        - Async/await
+        - Web APIs
+
+    - Execution context 
+        - Execute one line of code at a time.
+        - Each operation waits for thr last one to complete before executing.
+    
+    - Two types of code:-
+        - Blocking code -> Block the flow of program. for eg. reading file synchronously.
+        - Non Blocking code -> Does not block execution. for eg. reading file Asynchronously.
+    */
+
+    const sayPrince = function(){
+        console.log("Prince");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+
+    const changeMe = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+    
+    /*
+    - setTimeout(function, delay): Executes the function once after the specified delay (in milliseconds).
+    - setInterval(function, interval): Executes the function repeatedly at every specified interval (in milliseconds), until stopped.
+    */
+</script>
+</html>
