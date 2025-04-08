@@ -1,4 +1,4 @@
-// Before the class keyword was introduced in JavaScript, the same task as in 10_getter_setter.js was often accomplished in this way.
+// Before the class keyword was introduced in JavaScript, the same task as in getter_setter.js was often accomplished in this way using function.
 function User(email, password) {
     this._email = email;
     this._password = password
